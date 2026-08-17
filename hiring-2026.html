@@ -35,6 +35,7 @@
         <section class="resume-section split-section">
           <div class="section-label"><span>01</span><span>招聘链接</span></div>
           <div class="section-body table-wrap">
+            <p class="table-summary">当前共 <strong id="company-count">0</strong> 家公司</p>
             <table class="job-table">
               <thead><tr><th>公司</th><th>招聘入口</th></tr></thead>
               <tbody>
@@ -50,6 +51,7 @@
                 <tr><td>影石创新</td><td><a href="https://arashivision.jobs.feishu.cn/campus/position/application" target="_blank" rel="noreferrer">校园招聘 ↗</a></td></tr>
                 <tr><td>得物</td><td><a href="https://campus.dewu.com/578078/position/application" target="_blank" rel="noreferrer">校园招聘 ↗</a></td></tr>
                 <tr><td>华为</td><td><a href="https://career.huawei.com/cn/personal-center?pageType=myApplication&amp;recType=CR" target="_blank" rel="noreferrer">校园招聘 ↗</a></td></tr>
+                <tr><td>合合信息</td><td><a href="https://intsig.zhiye.com/personal/deliveryRecord" target="_blank" rel="noreferrer">投递记录 ↗</a></td></tr>
               </tbody>
             </table>
           </div>
@@ -58,5 +60,8 @@
         <footer class="footer"><span>COMPANY LINKS / 2026</span><a href="index.html">回到首页 ↗</a></footer>
       </section>
     </main>
+    <script>
+      document.getElementById("company-count").textContent = document.querySelectorAll(".job-table tbody tr").length;
+    </script>
   </body>
 </html>

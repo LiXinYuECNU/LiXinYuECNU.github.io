@@ -56,6 +56,8 @@ h2 { margin: 0 0 7px; font: 600 20px var(--serif); letter-spacing: -.03em; }
 .link-stack a:last-child { border-bottom: 0; }
 .link-stack a span { color: var(--muted); font: 10px var(--mono); }
 .table-wrap { overflow-x: auto; }
+.table-summary { margin: 0 0 24px; color: var(--muted); font: 11px var(--mono); }
+.table-summary strong { color: var(--accent); font-size: 15px; }
 .job-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .job-table th { padding: 0 16px 14px 0; color: var(--muted); font: 10px var(--mono); font-weight: 400; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
 .job-table td { padding: 18px 16px 18px 0; border-top: 1px solid var(--line); white-space: nowrap; }
