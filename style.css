@@ -1,0 +1,61 @@
+:root {
+  --ink: #202522;
+  --muted: #7b827d;
+  --line: #dfe3df;
+  --paper: #f5f7f3;
+  --accent: #d66042;
+  --serif: "Noto Serif SC", Georgia, serif;
+  --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+.page-shell { display: grid; grid-template-columns: minmax(190px, 23vw) 1fr; min-height: 100vh; }
+.sidebar { display: flex; flex-direction: column; justify-content: space-between; padding: 42px clamp(24px, 4vw, 64px); border-right: 1px solid var(--line); }
+.mark { display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid var(--ink); border-radius: 50%; font: 500 13px var(--mono); letter-spacing: -.08em; }
+.sidebar-copy { max-width: 150px; margin-bottom: auto; padding-top: 32vh; }
+.sidebar-footer { display: flex; flex-direction: column; gap: 12px; color: var(--muted); font: 11px var(--mono); text-transform: uppercase; }
+.status-dot::before { display: inline-block; width: 6px; height: 6px; margin-right: 7px; content: ""; background: #709b6d; border-radius: 50%; }
+.eyebrow { margin: 0; color: var(--muted); font: 11px var(--mono); letter-spacing: .08em; }
+.muted { color: var(--muted); font-size: 13px; line-height: 1.8; }
+.content { width: min(100%, 1040px); padding: 44px clamp(28px, 7vw, 120px) 32px clamp(28px, 7vw, 120px); }
+.hero { min-height: 530px; display: flex; flex-direction: column; justify-content: center; padding: 70px 0 80px; }
+h1 { max-width: 700px; margin: 42px 0 24px; font: 600 clamp(48px, 7vw, 96px)/1.1 var(--serif); letter-spacing: -.07em; }
+h1 em { font-style: normal; color: var(--muted); }
+.accent { color: var(--accent); }
+.intro { max-width: 460px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.9; }
+.contact-row { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 42px; font: 12px var(--mono); }
+.contact-row a { border-bottom: 1px solid var(--ink); padding-bottom: 5px; }
+.contact-row span { color: var(--muted); }
+.rule { height: 1px; background: var(--ink); }
+.resume-section { display: grid; grid-template-columns: 150px 1fr; gap: 42px; padding: 48px 0; border-bottom: 1px solid var(--line); }
+.section-label { display: flex; flex-direction: column; gap: 13px; color: var(--muted); font: 11px var(--mono); }
+.section-label span:first-child { color: var(--accent); }
+.section-body { max-width: 610px; }
+.empty-copy { color: var(--muted); font-size: 18px; line-height: 1.8; }
+.entries { display: grid; gap: 34px; }
+.entry { display: grid; grid-template-columns: 140px 1fr; gap: 22px; }
+.entry-meta { padding-top: 4px; color: var(--muted); font: 11px var(--mono); }
+h2 { margin: 0 0 7px; font: 600 20px var(--serif); letter-spacing: -.03em; }
+.entry p { margin: 0; color: var(--muted); font-size: 13px; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-list span { padding: 10px 14px; border: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.last-section { border-bottom: 0; }
+.footer { display: flex; justify-content: space-between; gap: 24px; padding-top: 54px; border-top: 1px solid var(--ink); color: var(--muted); font: 11px var(--mono); }
+.footer a { color: var(--ink); }
+@media (max-width: 680px) {
+  .page-shell { display: block; }
+  .sidebar { min-height: auto; flex-direction: row; align-items: center; padding: 24px 28px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .sidebar-copy, .sidebar-footer { display: none; }
+  .content { padding: 0 28px 28px; }
+  .hero { min-height: 480px; padding: 70px 0 66px; }
+  .resume-section { grid-template-columns: 1fr; gap: 25px; padding: 36px 0; }
+  .section-label { flex-direction: row; gap: 12px; }
+  .entry { grid-template-columns: 1fr; gap: 8px; }
+  .footer { flex-direction: column; gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
