@@ -36,6 +36,7 @@
           <div class="section-label"><span>01</span><span>招聘链接</span></div>
           <div class="section-body table-wrap">
             <p class="table-summary">当前共 <strong id="company-count">0</strong> 家公司</p>
+            <div class="job-table-grid" id="job-table-grid">
             <table class="job-table">
               <thead><tr><th>公司</th><th>招聘入口</th></tr></thead>
               <tbody>
@@ -55,6 +56,7 @@
                 <tr><td>拼多多</td><td><a href="https://careers.pddglobalhr.com/campus/personal-center" target="_blank" rel="noreferrer">校园招聘 ↗</a></td></tr>
               </tbody>
             </table>
+            </div>
           </div>
         </section>
 
@@ -62,7 +64,20 @@
       </section>
     </main>
     <script>
-      document.getElementById("company-count").textContent = document.querySelectorAll(".job-table tbody tr").length;
+      const tableGrid = document.getElementById("job-table-grid");
+      const primaryTable = tableGrid.querySelector(".job-table");
+      const rows = [...primaryTable.tBodies[0].rows];
+      document.getElementById("company-count").textContent = rows.length;
+
+      if (rows.length > 15) {
+        const midpoint = Math.ceil(rows.length / 2);
+        const secondTable = primaryTable.cloneNode(false);
+        secondTable.innerHTML = primaryTable.tHead.outerHTML + "<tbody></tbody>";
+        primaryTable.tBodies[0].replaceChildren(...rows.slice(0, midpoint));
+        secondTable.tBodies[0].append(...rows.slice(midpoint));
+        tableGrid.append(secondTable);
+        tableGrid.classList.add("is-split");
+      }
     </script>
   </body>
 </html>

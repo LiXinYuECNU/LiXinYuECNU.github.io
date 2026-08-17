@@ -60,6 +60,9 @@ h2 { margin: 0 0 7px; font: 600 20px var(--serif); letter-spacing: -.03em; }
 .table-wrap { overflow-x: auto; }
 .table-summary { margin: 0 0 24px; color: var(--muted); font: 11px var(--mono); }
 .table-summary strong { color: var(--accent); font-size: 15px; }
+.job-table-grid { width: 100%; }
+.job-table-grid.is-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.job-table-grid.is-split .job-table + .job-table { padding-left: 28px; border-left: 1px solid var(--line); }
 .job-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .job-table th { padding: 0 16px 14px 0; color: var(--muted); font: 10px var(--mono); font-weight: 400; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
 .job-table td { padding: 18px 16px 18px 0; border-top: 1px solid var(--line); white-space: nowrap; }
@@ -97,6 +100,8 @@ h2 { margin: 0 0 7px; font: 600 20px var(--serif); letter-spacing: -.03em; }
   .entry { grid-template-columns: 1fr; gap: 8px; }
   .publication { grid-template-columns: 1fr; gap: 8px; }
   .project-grid { grid-template-columns: 1fr; }
+  .job-table-grid.is-split { display: block; }
+  .job-table-grid.is-split .job-table + .job-table { margin-top: 24px; padding-left: 0; border-left: 0; }
   .footer { flex-direction: column; gap: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
