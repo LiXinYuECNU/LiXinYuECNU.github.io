@@ -32,6 +32,7 @@ a:hover { color: var(--accent); }
 .inner-page .page-heading { min-height: 300px; padding: 48px 0 40px; }
 .inner-page h1 { max-width: 900px; margin: 26px 0 18px; font-size: clamp(36px, 4vw, 58px); white-space: nowrap; }
 .inner-page .intro { max-width: 820px; white-space: nowrap; }
+.hiring-intro { margin: 0 0 32px; color: var(--muted); font-size: 15px; line-height: 1.9; white-space: nowrap; }
 h1 { max-width: 700px; margin: 42px 0 24px; font: 600 clamp(48px, 7vw, 96px)/1.1 var(--serif); letter-spacing: -.07em; }
 h1 em { font-style: normal; color: var(--muted); }
 .accent { color: var(--accent); }
@@ -98,6 +99,7 @@ h2 { margin: 0 0 7px; font: 600 20px var(--serif); letter-spacing: -.03em; }
   .page-heading { min-height: 360px; padding: 60px 0 50px; }
   .inner-page .intro { white-space: normal; }
   .inner-page h1 { white-space: normal; }
+  .hiring-intro { white-space: normal; }
   .resume-section { grid-template-columns: 1fr; gap: 25px; padding: 36px 0; }
   .section-label { flex-direction: row; gap: 12px; }
   .entry { grid-template-columns: 1fr; gap: 8px; }
